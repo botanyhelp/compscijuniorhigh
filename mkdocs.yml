@@ -1,0 +1,7 @@
+site_name: Compsci2
+theme: readthedocs
+pages:
+- Home: index.md
+- Binary: binary.md
+- Python: python.md
+- Typing: typing.md
