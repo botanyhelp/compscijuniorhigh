@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <title>Binary - Compsci2</title>
+  
+
+  <link rel="shortcut icon" href="../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Binary";
+    var mkdocs_page_input_path = "binary.md";
+    var mkdocs_page_url = "/binary/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script>
+  <script src="../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Compsci2</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Binary</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#compsci-binary-class">CompSci Binary Class</a></li>
+                
+                    <li><a class="toctree-l4" href="#binary-representation">Binary Representation</a></li>
+                
+                    <li><a class="toctree-l4" href="#ascii">ASCII</a></li>
+                
+                    <li><a class="toctree-l4" href="#reals">Reals</a></li>
+                
+                    <li><a class="toctree-l4" href="#objects">Objects</a></li>
+                
+            
+            </ul>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../python/">Python</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../typing/">Typing</a>
+        
+    </li>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Compsci2</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Binary</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h2 id="compsci-binary-class">CompSci Binary Class</h2>
+<h3 id="binary-representation">Binary Representation</h3>
+<p>Computers deal with bits.  Here we see 8 bits in a row, one bit per square:</p>
+<p><img alt="https://upload.wikimedia.org/wikibooks/en/f/f5/Byte45.png" src="https://upload.wikimedia.org/wikibooks/en/f/f5/Byte45.png" /></p>
+<p>We might interpret that to mean the number 45 (<strong>32+8+4+1</strong>).</p>
+<p>Computers are also <strong>byte-oriented</strong>.  A byte is 8bits and is the smallest thing that a computer will consider.  Here we see bytes, one byte (8bits) per blue square:</p>
+<p><img alt="http://www.cs.colostate.edu/~anderson/cs253/wiki/lib/exe/fetch.php?w=400&amp;media=lectures:typespic.png" src="http://www.cs.colostate.edu/~anderson/cs253/wiki/lib/exe/fetch.php?w=400&amp;media=lectures:typespic.png" /></p>
+<p>The names to the left of the blue squares are some common data types: char bool int double long.  The last one with 5 bytes is an array of 5 char.  The sixth one in the list above is a <strong>pointer to int</strong>.  We will talk about arrays and pointers another time. </p>
+<p>Notice that the boolean (<strong>bool</strong> in the picture above) takes a whole byte.  Boolean is a data type that has two representations: <strong>TRUE</strong> or <strong>FALSE</strong>.  Therefore, to represent a boolean, we should only need one bit <strong>1=TRUE</strong> or <strong>0=FALSE</strong>.  Using 8bits (a whole byte!) to represent a boolean is a waste of 7 bits.  But computers are <strong>byte-oriented</strong>.  The smallest unit that will be considered is a byte, not a bit.  </p>
+<p>Notice that some data types (like <strong>long int</strong> in the picture above) take several bytes.  To represent large numbers, like 32767, you're going to need some more bytes.  </p>
+<p>Here we see a representation of a number, (sint16, signed integer 16 bits) that is using two bytes, 16 bits, to represent one number.  Notice also that the red bit is being used to allow for the representation of negative numbers.  It takes a whole bit to tell the <strong>sign</strong> of the number (<strong>negative=1</strong> or <strong>positive=0</strong>):</p>
+<p><img alt="http://i.stack.imgur.com/LqMAx.png" src="http://i.stack.imgur.com/LqMAx.png" /></p>
+<p>The list below shows the names and maximum/minimum values for numbers that are using increasing numbers of bytes to represent the number (the CHAR uses one byte, LONG uses 8 bytes):</p>
+<ul>
+<li>The minimum value of CHAR = -128</li>
+<li>The maximum value of CHAR = 127</li>
+<li>The minimum value of UNSIGNED CHAR = 0</li>
+<li>The maximum value of UNSIGNED CHAR = 255</li>
+<li>The minimum value of SHORT INT = -32768</li>
+<li>The maximum value of SHORT INT = 32767</li>
+<li>The minimum value of INT = -2147483648</li>
+<li>The maximum value of INT = 2147483647</li>
+<li>The minimum value of CHAR = -128</li>
+<li>The maximum value of CHAR = 127</li>
+<li>The minimum value of LONG = -9223372036854775808</li>
+<li>The maximum value of LONG = 9223372036854775807</li>
+<li>The minimum value of UNSIGNED LONG = 0</li>
+<li>The maximum value of UNSIGNED LONG = 18446744073709551616 </li>
+</ul>
+<p>Those first four, CHAR and UNSIGNED CHAR, (<strong>in the list above</strong>) would look like these bits:</p>
+<ul>
+<li>10000000</li>
+<li>01111111</li>
+<li>00000000</li>
+<li>11111111</li>
+</ul>
+<p>Those last two UNSIGNED LONGs would look like these bits:</p>
+<ul>
+<li>0000000000000000000000000000000000000000000000000000000000000000</li>
+<li>1111111111111111111111111111111111111111111111111111111111111111</li>
+</ul>
+<p>Here we see commonly used data types and how many bytes are required to use them:</p>
+<p><img alt="http://image.slidesharecdn.com/dweiss-sizeof-120509022400-phpapp02/95/sizeofobject-how-much-memory-objects-take-on-jvms-and-when-this-may-matter-11-728.jpg" src="http://image.slidesharecdn.com/dweiss-sizeof-120509022400-phpapp02/95/sizeofobject-how-much-memory-objects-take-on-jvms-and-when-this-may-matter-11-728.jpg" /></p>
+<p>Notice that if you are treating those 64 bits as an UNSIGNED LONG, then there is no way to represent negative 1 (-1) or any negative number.  </p>
+<p>How those 64 bits are treated is up to you.  If you want an extremely large positive integer, then UNSIGNED LONG might be a good choice.  </p>
+<p>Other ways you might want to treat 64 bits include:</p>
+<ul>
+<li>an array of 8 UNSIGNED CHAR, eight 8-bit numbers</li>
+<li>an array of 8 SIGNED CHAR, eight 8-bit numbers</li>
+<li>an array of 4 SHORT int, four 16-bit numbers</li>
+<li>an array of 2 LONG, two 32-bit numbers</li>
+</ul>
+<h3 id="ascii">ASCII</h3>
+<p>A much more common way to deal with 64 bits is to treat it as text.  </p>
+<p>Did you know that billions of computers think that this 64 bit stream means something very specific:</p>
+<p>0011100001110100011010000100011101110010011000010110010001100101</p>
+<p>It means precisely this:</p>
+<p><strong>8thGrade</strong></p>
+<p>There is a long standing agreement that specific bytes (8bits) represent specific letters/characters.  Its called the ASCII table and it looks like this:</p>
+<p><img alt="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/ASCII-Table-wide.svg/2000px-ASCII-Table-wide.svg.png" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/ASCII-Table-wide.svg/2000px-ASCII-Table-wide.svg.png" /></p>
+<p>If you break that 64bit number into eight 8bit numbers like this:</p>
+<p>00111000 01110100 01101000 01000111 01110010 01100001 01100100 01100101 </p>
+<p>Then you can use the ASCII table to convert those 8 numbers to the letters that they represent.  Lets take the first 8bit number: </p>
+<p>00111000</p>
+<p>That number as an integer is 56 (32+16+8).  Using the ASCII table above, we can see that the <strong>Char</strong> represented by the decimal number 56 is "8".  Lets take the second 8bit number from above:</p>
+<p>01110100 </p>
+<p>That number as an integer is 116 (64+32+16+4).  Using the ASCII table above, we can see that the <strong>Char</strong> represented by the decimal number 116 is "t", lowercase t.  </p>
+<p>8 t h G r a d e</p>
+<p>If you grow tired of the ASCII table, you can instead treat those 64bits as a large integer, and get this large number:</p>
+<p>4067991019493352549</p>
+<ul>
+<li>How many bits do you need to represent DNA, which has 4 nucleotides GACT?</li>
+<li>How many bits do you need to represent all of the world's characters (not just ABC123) including Chinese, Arabic and Klingon?  </li>
+<li>How would that happen, how would you expand beyond ASCII?</li>
+</ul>
+<h3 id="reals">Reals</h3>
+<p>So far we've been talking about integers.  Representing <strong>real</strong> numbers (numbers with decimal places) is also required.  Reals are also represented with bits.  We'll leave reals for another day but the representation looks like this:</p>
+<p><img alt="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/IEEE_754_Double_Floating_Point_Format.svg/2000px-IEEE_754_Double_Floating_Point_Format.svg.png" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/IEEE_754_Double_Floating_Point_Format.svg/2000px-IEEE_754_Double_Floating_Point_Format.svg.png" /></p>
+<h3 id="objects">Objects</h3>
+<p>We've been covering "standard" ways of treating 64 bits.  You can treat 64 bits however you want.  We could decide that those 64 bits represent a game character, like this:</p>
+<ul>
+<li>bit #1, the bit on the far right side, represents whether the character is GOOD=1 or EVIL=0</li>
+<li>bit #2, the second bit from the far right side, represents whether the character is FEMALE=1 or MALE=0</li>
+<li>bit #3, the third bit from the far right side, represents whether the character is HUMAN=1 or NONHUMAN=0</li>
+<li>bit #4, the fourth bit from the far right side, represents whether the character is AWAKE=1 or ASLEEP=0</li>
+</ul>
+<p>Under this treatment, this number:</p>
+<ul>
+<li>0000000000000000000000000000000000000000000000000000000000001111</li>
+</ul>
+<p>..would represent a GOOD, FEMALE, HUMAN and AWAKE.  This number:</p>
+<ul>
+<li>0000000000000000000000000000000000000000000000000000000000000000</li>
+</ul>
+<p>..would represent an EVIL, MALE, NONHUMAN and ASLEEP.  It might be easier to talk about these characters by saying that:</p>
+<ul>
+<li>character 1 is a 15</li>
+<li>character 2 is a 0</li>
+</ul>
+<p>..any program that understood the format would know four important characteristics of these characters. We know that a 3 represents a character that is GOOD FEMALE, NONHUMAN and ASLEEP. </p>
+<pre><code>What is the state of a character that is a 6?
+</code></pre>
+
+<p>Using bits to represent something besides numbers is very common and is the basis of <strong>objects</strong> in programming.  An <strong>object</strong> typically has a state (like a "1" character has a state of: GOOD, MALE, NONHUMAN and ASLEEP).  An object also usually has <strong>behavior</strong> represented in those bits.  For example, we could use some bits to represent a function <strong>castSpell()</strong>.  castSpell() might do different things based on the state of the object.  For example, it might not do anything at all if the character doing the castSpell() has a state of ASLEEP.  </p>
+<p>How castSpell() is represented as bits is a complex topic that we won't cover.  As programmers, we care about the syntax of the programming language.  As programmers, we want to write code that does the things that castSpell() should do.  As programmers, we do NOT care how the actual bits look inside of castSpell() when its running on the machine.  We do care about the python, for example, that we write, and we do care about what happens when we run the python program.  We want to see, for example, when we run the python, that any sleeping characters are unable to cast any spells.  As computer scientists, we do care about the representation of information (<strong>data structures</strong>) and what to do with it (<strong>algorithms</strong>). </p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../python/" class="btn btn-neutral float-right" title="Python">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href=".." class="btn btn-neutral" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href=".." style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../python/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

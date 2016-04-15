@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <title>Python - Compsci2</title>
+  
+
+  <link rel="shortcut icon" href="../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Python";
+    var mkdocs_page_input_path = "python.md";
+    var mkdocs_page_url = "/python/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script>
+  <script src="../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Compsci2</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../binary/">Binary</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Python</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#compsci-python-3-class">CompSci Python 3 Class</a></li>
+                
+                    <li><a class="toctree-l4" href="#assignment-means">assignment means =</a></li>
+                
+                    <li><a class="toctree-l4" href="#data-types">data types</a></li>
+                
+                    <li><a class="toctree-l4" href="#function-print-and-print">function print and print()</a></li>
+                
+                    <li><a class="toctree-l4" href="#list">list</a></li>
+                
+                    <li><a class="toctree-l4" href="#dictionary">dictionary</a></li>
+                
+                    <li><a class="toctree-l4" href="#control">control</a></li>
+                
+                    <li><a class="toctree-l4" href="#function-definition">function definition</a></li>
+                
+                    <li><a class="toctree-l4" href="#function-calling">function calling</a></li>
+                
+                    <li><a class="toctree-l4" href="#first-program">first program</a></li>
+                
+            
+            </ul>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../typing/">Typing</a>
+        
+    </li>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Compsci2</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Python</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h2 id="compsci-python-3-class">CompSci Python 3 Class</h2>
+<ul>
+<li>assignment means =</li>
+<li>data types</li>
+<li>function print and print()</li>
+<li>list</li>
+<li>dictionary</li>
+<li>control</li>
+<li>function definition</li>
+<li>function calling</li>
+<li>first program</li>
+</ul>
+<h3 id="assignment-means">assignment means =</h3>
+<ul>
+<li>number<ul>
+<li>state = 1</li>
+</ul>
+</li>
+<li>boolean<ul>
+<li>human = True</li>
+</ul>
+</li>
+<li>string<ul>
+<li>name = "Tom"</li>
+</ul>
+</li>
+<li>list  ordered sequence of values<ul>
+<li>grades = [1,2,3,4,5,6,8,7]</li>
+</ul>
+</li>
+<li>tuple immutable ordered sequence of values<ul>
+<li>planets = ("Mercury","Venus","Earth","Mars","Jupiter","Saturn","Uranus","Neptune")</li>
+</ul>
+</li>
+<li>set  unordered bags of values<ul>
+<li>letters = {"s","h","e","l","a","h"}</li>
+</ul>
+</li>
+<li>dictionary    unordered bags of key-value pairs<ul>
+<li>people = {"george":"washington", "barack":"obama"}</li>
+</ul>
+</li>
+</ul>
+<p><strong>common assignment errors:</strong></p>
+<ul>
+<li>"instrument" = "cello"   <strong>BAD, variable names are letters only no quotes allowed, do this instead: instrument = "cello"</strong></li>
+<li>instrument = cello   <strong>BAD, cello is not an existing value yet and cannot be assigned, do this instead: instrument = "cello"</strong></li>
+<li>instrument type = "cello"   <strong>BAD, variable names are letters only, no spaces allowed, do this instead: instrumentType = "cello"</strong></li>
+<li>print = "Hello World"   <strong>BAD, print is a variable name that is already in use, do this instead: print_variable = "hello world"</strong></li>
+</ul>
+<h3 id="data-types">data types</h3>
+<ul>
+<li>number<ul>
+<li>1</li>
+<li>3.14159</li>
+<li>-44</li>
+<li>0</li>
+<li>3/4 </li>
+</ul>
+</li>
+<li>boolean <ul>
+<li>True</li>
+<li>False</li>
+</ul>
+</li>
+<li>string<ul>
+<li>"good woman child"</li>
+<li>"好女子"</li>
+</ul>
+</li>
+<li>list<ul>
+<li>[1,2,3]</li>
+<li>["a","b","c"]</li>
+<li>["one", 2, True]</li>
+</ul>
+</li>
+<li>tuple<ul>
+<li>("alpha","omega")</li>
+</ul>
+</li>
+<li>dictionary<ul>
+<li>{"a":1,"b":2}</li>
+<li>{1:"a",2:"b"}</li>
+</ul>
+</li>
+<li>set<ul>
+<li>{1,2,3}</li>
+</ul>
+</li>
+</ul>
+<h3 id="function-print-and-print">function print and print()</h3>
+<ul>
+<li>print is a function</li>
+<li>print() is calling a function</li>
+</ul>
+<pre><code class="python">name=&quot;Tom&quot;
+print(&quot;hello world&quot;)
+print(name)
+</code></pre>
+
+<h3 id="list">list</h3>
+<pre><code class="python">grades = [1,2,3,4,5,6,8,7]
+grades[0]
+grades[1]
+grades[7]
+grades[7] = 8
+grades[6] = 7
+grades[7]
+grades[1:3]
+grades[:2]
+grades[:2]
+grades[2:]
+len(grades)
+grades.append(9)
+len(grades)
+# grades[9] = 10  **BAD no place at grades[9] to put value ~IndexError: list assignment index out of range~**
+</code></pre>
+
+<h3 id="dictionary">dictionary</h3>
+<pre><code class="python">people = {&quot;george&quot;:&quot;washington&quot;, &quot;barack&quot;:&quot;obama&quot;}
+people
+people[&quot;ulysses&quot;] = &quot;grant&quot; 
+people[&quot;george&quot;] = &quot;bush&quot;
+#people[&quot;donald&quot;]    **BAD, no such key in people dictionary ~KeyError: 'donald'~**
+</code></pre>
+
+<h3 id="control">control</h3>
+<ul>
+<li>python code starts executing on the first line and continues line by line until last line and program ends</li>
+<li>
+<p>control allows you to control program flow (skip lines, rerun lines)</p>
+</li>
+<li>
+<p>if, elif, else  (condition, colon, indentation)</p>
+</li>
+</ul>
+<pre><code class="python">state=1
+human=True
+if(human==True):
+    print(&quot;Hello&quot;)
+else:
+    print(&quot;Peace&quot;)
+if(human==True):
+    if(state==50):
+         print(&quot;Howdy, you must be from Hawaii&quot;)
+    elif(state==1):
+         print(&quot;Hello, you must be from Delaware&quot;)
+    else:
+         print(&quot;Hello, are you Canadian?&quot;)
+else:
+    print(&quot;Peace&quot;)
+</code></pre>
+
+<ul>
+<li>for </li>
+</ul>
+<pre><code class="python">for planet in planets:
+    print w, len(w)
+
+grades = [1,2,3,4,5,6,8,7]
+planets = (&quot;Mercury&quot;,&quot;Venus&quot;,&quot;Earth&quot;,&quot;Mars&quot;,&quot;Jupiter&quot;,&quot;Saturn&quot;,&quot;Uranus&quot;,&quot;Neptune&quot;)
+for item in range(len(grades)):
+    print(grades[item])
+
+
+people = {&quot;george&quot;:&quot;washington&quot;, &quot;barack&quot;:&quot;obama&quot;}
+for key in people.keys():
+    print key, people[key]
+</code></pre>
+
+<ul>
+<li>while</li>
+</ul>
+<pre><code class="python">i = 5
+while(i&gt;0):
+    print i
+    i=i-1    # what happens if we forget to decrement i?
+print(&quot;blast off&quot;)
+</code></pre>
+
+<h3 id="function-definition">function definition</h3>
+<pre><code class="python">def fib(n):
+     &quot;&quot;&quot;Print a Fibonacci series up to n.&quot;&quot;&quot;
+     a, b = 0, 1
+     while a &lt; n:
+         print a,
+         a, b = b, a+b
+</code></pre>
+
+<h3 id="function-calling">function calling</h3>
+<pre><code class="python">fib(2000)
+</code></pre>
+
+<h3 id="first-program">first program</h3>
+<pre><code class="python">SUFFIXES = {1000: ['KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'],
+            1024: ['KiB', 'MiB', 'GiB', 'TiB', 'PiB', 'EiB', 'ZiB', 'YiB']}
+
+def approximate_size(size, a_kilobyte_is_1024_bytes=True):
+    '''Convert a file size to human-readable form.
+
+    Keyword arguments:
+    size -- file size in bytes
+    a_kilobyte_is_1024_bytes -- if True (default), use multiples of 1024
+                                if False, use multiples of 1000
+
+    Returns: string
+
+    '''
+    if size &lt; 0:
+        raise ValueError('number must be non-negative')
+
+    multiple = 1024 if a_kilobyte_is_1024_bytes else 1000
+    for suffix in SUFFIXES[multiple]:
+        size /= multiple
+        if size &lt; multiple:
+            return '{0:.1f} {1}'.format(size, suffix)
+
+    raise ValueError('number too large')
+
+if __name__ == '__main__':
+    print(approximate_size(1000000000000, False))
+    print(approximate_size(1000000000000))
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../typing/" class="btn btn-neutral float-right" title="Typing">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../binary/" class="btn btn-neutral" title="Binary"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../binary/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../typing/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>
