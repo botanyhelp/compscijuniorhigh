@@ -94,6 +94,10 @@
                 
                     <li><a class="toctree-l4" href="#first-program">first program</a></li>
                 
+                    <li><a class="toctree-l4" href="#instruction-1">instruction 1</a></li>
+                
+                    <li><a class="toctree-l4" href="#instruction-2">instruction 2</a></li>
+                
             
             </ul>
         
@@ -362,6 +366,139 @@ if __name__ == '__main__':
     print(approximate_size(1000000000000, False))
     print(approximate_size(1000000000000))
 </code></pre>
+
+<h3 id="instruction-1">instruction 1</h3>
+<ul>
+<li>topics<ul>
+<li>edit python code with linux leafpad or macOSX TextWrangler or Textedit</li>
+<li>run python program <strong>python Documents/myProgram.py</strong></li>
+<li>edit program, save program, run program, edit,save,run,edit,save,run</li>
+<li>variable names</li>
+<li>print function</li>
+<li>numbers, strings</li>
+<li>list</li>
+<li>dictionary</li>
+<li>loop <strong>for item in listOfItems</strong>, <strong>colon:</strong>, <strong>indentation</strong></li>
+</ul>
+</li>
+</ul>
+<pre><code class="python">name = &quot;Tom&quot;
+print(name)
+myList = [1,2,3,4]
+for item in myList:
+    print(item)
+
+myList[3]=&quot;four&quot;
+for item in myList:
+    print(item)
+
+people = {&quot;george&quot;:&quot;w&quot;,&quot;barack&quot;:&quot;o&quot;}
+for key in people.keys():
+    print(key,people[key])
+
+people[&quot;hillary&quot;]=&quot;c&quot;
+for key in people.keys():
+    print(key,people[key])
+
+</code></pre>
+
+<ul>
+<li>excercises (note: codes like shown are written on chalkboard and students type and run at their PC)<ul>
+<li>assign a double quoted string value to a variable</li>
+<li>print that variable</li>
+<li>assign a list of values <strong>use square brackets</strong> to a variable</li>
+<li>loop through that list and print each value <strong>for item in list:</strong>, <strong>indentation</strong></li>
+<li>assign a dictionary of key value pairs <strong>use curly brackets and :</strong> to a variable</li>
+<li>loop through that dictionary and print each key and value <strong>for key in dictionary.keys():</strong>, <strong>indentation</strong></li>
+</ul>
+</li>
+</ul>
+<h3 id="instruction-2">instruction 2</h3>
+<ul>
+<li>topics<ul>
+<li>python console versus writing program</li>
+<li>review python basic programming from last week</li>
+<li>control with if <strong>if elif elif elif else</strong></li>
+<li>modules <strong>import math</strong></li>
+<li>string concatenation with <strong>+</strong></li>
+<li>define function</li>
+<li>call function</li>
+<li>get input from user of the program with <strong>input()</strong> function</li>
+</ul>
+</li>
+</ul>
+<p>Start python console by typing <strong>python</strong> in terminal</p>
+<pre><code class="python">width = 20
+height = 5*9
+width * height
+</code></pre>
+
+<p>Stop python console by typing <strong>CTRL D</strong> or by calling <strong>quit()</strong> function</p>
+<p>String concatenation</p>
+<pre><code class="python"># This is a comment because of the # symbol
+phrase = &quot;hello&quot;
+print(phrase)
+phrase = phrase+&quot; world&quot;
+print(phrase)
+</code></pre>
+
+<p>Control program with if elif else</p>
+<pre><code class="python">x = 99
+if x &lt; 0:
+      print ('the number is negative')
+elif x == 0:
+      print ('the number is zero')
+elif x == 1:
+      print ('the number is one')
+else:
+      print ('More')
+</code></pre>
+
+<p>Make and assign list, loop through list, print each value and len(value)</p>
+<pre><code class="python">a = ['cat', 'frog', 'horse']
+for x in a:
+    print (x, len(x))
+</code></pre>
+
+<p>Use python modules</p>
+<pre><code class="python">import math
+print(math.sin(1))
+</code></pre>
+
+<p>Define a function called sum</p>
+<pre><code class="python">def sum(x,y):
+    total = x+y
+</code></pre>
+
+<p>Call function sum with sum(3,4)</p>
+<pre><code class="python">sum(3,4)
+</code></pre>
+
+<p>Use input() to gather input from the user of the program</p>
+<pre><code class="python">x = int(input(&quot;Enter an integer: &quot;))
+if(x&gt;=0):
+    print(&quot;postive&quot;)
+else:
+    print(&quot;negative&quot;)
+</code></pre>
+
+<ul>
+<li>excercises (note: codes should already be in existing program for reference, or also on board)<ul>
+<li>start python console with <strong>python</strong> in terminal</li>
+<li>enter python code in console <strong>print("hello")</strong> and hit ENTER</li>
+<li>stop python console with <strong>CTRL-D</strong> in terminal or <strong>quit()</strong> function</li>
+<li>assign a list of strings to a variable</li>
+<li>loop through that variable and print each item</li>
+<li>assign a list of key value pairs to a dictionary</li>
+<li>loop through that dictionary and print each key and value</li>
+<li>concatenate strings and print the concatenated result</li>
+<li>define a function called subract(x,y) that takes two arguments and returns one result</li>
+<li>call subtract(5,2) and confirm correct result</li>
+<li>call subtract(2,5) and confirm correct result</li>
+<li>gather input from user and report if positive elif negative else zero</li>
+</ul>
+</li>
+</ul>
               
             </div>
           </div>
